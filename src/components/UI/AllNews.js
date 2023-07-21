@@ -1,4 +1,5 @@
 import { Button, Card, Col, Row } from 'antd';
+import Link from 'next/link';
 const { Meta } = Card;
 const AllNews = ({ allNews }) => (
     <>
@@ -62,6 +63,9 @@ const AllNews = ({ allNews }) => (
                                         alignItems: 'end',
                                     }} >
 
+                                        <Link href={`/news/${news?.id}`} style={{
+                                            width:'100%',                             
+                                        }}>
                                         <Button
                                             style={{
                                                 width: '100%',
@@ -71,7 +75,8 @@ const AllNews = ({ allNews }) => (
                                                 color: 'white',
 
                                             }}
-                                        >Primary Button</Button>
+                                        >Read More</Button>
+                                        </Link>
                                     </div>
                                 </div>
                             </Card>
